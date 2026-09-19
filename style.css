@@ -263,7 +263,7 @@ body, html {
 @keyframes aleteoIzqTrasero { 0% { transform: rotate(-20deg) rotateY(0deg) scaleX(0.8); } 100% { transform: rotate(-20deg) rotateY(-55deg) scaleX(0.8); } }
 
 /* =======================================================
-   EFECTO: POLVO DE HADAS INTENSO BLANCO BRILLANTE
+   EFECTO: POLVO DE HADAS BLANCO BRILLANTE NEÓN
    ======================================================= */
 
 .polvo-hada-der::before,
@@ -289,7 +289,6 @@ body, html {
 
 /* IZQUIERDA A DERECHA */
 
-/* Capa 1: Estrellas Blancas Neón Principales */
 .polvo-hada-der::before {
     top: 5px;
     left: -10px;
@@ -297,38 +296,34 @@ body, html {
     height: 12px;
     background: #ffffff;
     clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
-    /* Brillo Neón Blanco Intenso */
     filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 20px #ffffff);
     animation: pixiedustEstrellaDer 1.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
 }
 
-/* Capa 2: Lluvia de Estrellas Blancas Destellantes */
 .polvo-hada-der::after {
     top: 15px;
     left: -20px;
     width: 8px;
     height: 8px;
-    background: #ffffff; /* CAMBIADO DE DORADO A BLANCO */
+    background: #ffffff;
     clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
-    filter: drop-shadow(0 0 8px #ffffff); /* Brillo aumentado */
+    filter: drop-shadow(0 0 8px #ffffff);
     animation: pixiedustLluviaDer 1.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     animation-delay: 0.25s;
 }
 
-/* Capa 3: Micro-Estrellas Blancas */
 .polvo-der-extra::before {
     top: 0px;
     left: -15px;
     width: 9px;
     height: 9px;
-    background: #ffffff; /* CAMBIADO DE ROSA A BLANCO */
+    background: #ffffff;
     clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
-    filter: drop-shadow(0 0 7px #ffffff); /* Brillo aumentado */
+    filter: drop-shadow(0 0 7px #ffffff);
     animation: pixiedustEstrellaDer 1.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     animation-delay: 0.5s;
 }
 
-/* Capa 4: Destellos de Fondo Blancos */
 .polvo-der-extra::after {
     top: 22px;
     left: -28px;
@@ -336,7 +331,7 @@ body, html {
     height: 10px;
     background: #ffffff;
     clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
-    filter: drop-shadow(0 0 10px #ffffff); /* Brillo aumentado */
+    filter: drop-shadow(0 0 10px #ffffff);
     animation: pixiedustLluviaDer 1.7s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     animation-delay: 0.75s;
 }
@@ -359,7 +354,7 @@ body, html {
     right: -20px;
     width: 8px;
     height: 8px;
-    background: #ffffff; /* CAMBIADO DE DORADO A BLANCO */
+    background: #ffffff;
     clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
     filter: drop-shadow(0 0 8px #ffffff);
     animation: pixiedustLluviaIzq 1.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
@@ -371,7 +366,7 @@ body, html {
     right: -15px;
     width: 9px;
     height: 9px;
-    background: #ffffff; /* CAMBIADO DE ROSA A BLANCO */
+    background: #ffffff;
     clip-path: polygon(50% 0%, 63% 37%, 100% 50%, 63% 63%, 50% 100%, 37% 63%, 0% 50%, 37% 37%);
     filter: drop-shadow(0 0 7px #ffffff);
     animation: pixiedustEstrellaIzq 1.8s cubic-bezier(0.25, 1, 0.5, 1) infinite;
@@ -416,43 +411,52 @@ body, html {
     100% { opacity: 0; transform: scale(0) rotate(120deg) translate(42px, 38px); }
 }
 
-/* POSICIONES INICIALES FUERA DE PANTALLA */
+/* =======================================================
+   POSICIONES, TAMAÑOS Y ANIMACIONES DE LAS 14 MARIPOSAS
+   ======================================================= */
 
-/* 8 DERECHA */
-.m-der-1 { top: 15%; left: -20%; animation: vueloDer1 14s ease-in-out infinite; }
-.m-der-2 { top: 35%; left: -20%; animation: vueloDer2 18s ease-in-out infinite 2.5s; }
-.m-der-3 { top: 55%; left: -20%; animation: vueloDer3 16s ease-in-out infinite 5s; }
-.m-der-4 { top: 75%; left: -20%; animation: vueloDer4 20s ease-in-out infinite 7.5s; }
-.m-der-5 { top: 25%; left: -20%; animation: vueloDer5 15s ease-in-out infinite 10s; }
-.m-der-6 { top: 45%; left: -20%; animation: vueloDer6 17s ease-in-out infinite 12.5s; }
-.m-der-7 { top: 65%; left: -20%; animation: vueloDer7 19s ease-in-out infinite 14s; }
-.m-der-8 { top: 85%; left: -20%; animation: vueloDer8 21s ease-in-out infinite 16s; }
+/* 7 IZQUIERDA A DERECHA */
+/* 1. Grande */   .m-der-1 { top: 20%; left: -20%; animation: vueloDer1 15s ease-in-out infinite; }
+/* 2. Grande */   .m-der-2 { top: 60%; left: -20%; animation: vueloDer2 17s ease-in-out infinite 5s; }
+/* 3. Mediana */  .m-der-3 { top: 40%; left: -20%; animation: vueloDer3 16s ease-in-out infinite 2.5s; }
+/* 4. Pequeña */ .m-der-4 { top: 15%; left: -20%; animation: vueloDer4 19s ease-in-out infinite 7.5s; }
+/* 5. Pequeña */ .m-der-5 { top: 35%; left: -20%; animation: vueloDer5 14s ease-in-out infinite 10s; }
+/* 6. Pequeña */ .m-der-6 { top: 75%; left: -20%; animation: vueloDer6 18s ease-in-out infinite 12.5s; }
+/* 7. Pequeña */ .m-der-7 { top: 85%; left: -20%; animation: vueloDer7 20s ease-in-out infinite 15s; }
 
-/* 8 IZQUIERDA */
-.m-izq-1 { top: 20%; left: 120%; animation: vueloIzq1 15s ease-in-out infinite 1s; }
-.m-izq-2 { top: 40%; left: 120%; animation: vueloIzq2 19s ease-in-out infinite 3.5s; }
-.m-izq-3 { top: 60%; left: 120%; animation: vueloIzq3 17s ease-in-out infinite 6s; }
-.m-izq-4 { top: 80%; left: 120%; animation: vueloIzq4 21s ease-in-out infinite 8.5s; }
-.m-izq-5 { top: 10%; left: 120%; animation: vueloIzq5 14s ease-in-out infinite 11s; }
-.m-izq-6 { top: 30%; left: 120%; animation: vueloIzq6 18s ease-in-out infinite 13.5s; }
-.m-izq-7 { top: 50%; left: 120%; animation: vueloIzq7 16s ease-in-out infinite 15s; }
-.m-izq-8 { top: 70%; left: 120%; animation: vueloIzq8 20s ease-in-out infinite 17s; }
+/* 7 DERECHA A IZQUIERDA */
+/* 1. Grande */   .m-izq-1 { top: 25%; left: 120%; animation: vueloIzq1 16s ease-in-out infinite 1s; }
+/* 2. Grande */   .m-izq-2 { top: 65%; left: 120%; animation: vueloIzq2 18s ease-in-out infinite 6s; }
+/* 3. Mediana */  .m-izq-3 { top: 45%; left: 120%; animation: vueloIzq3 15s ease-in-out infinite 3.5s; }
+/* 4. Pequeña */ .m-izq-4 { top: 10%; left: 120%; animation: vueloIzq4 20s ease-in-out infinite 8.5s; }
+/* 5. Pequeña */ .m-izq-5 { top: 50%; left: 120%; animation: vueloIzq5 14s ease-in-out infinite 11s; }
+/* 6. Pequeña */ .m-izq-6 { top: 80%; left: 120%; animation: vueloIzq6 17s ease-in-out infinite 13.5s; }
+/* 7. Pequeña */ .m-izq-7 { top: 30%; left: 120%; animation: vueloIzq7 19s ease-in-out infinite 16s; }
 
-/* TRAYECTORIAS Y TAMAÑOS */
-@keyframes vueloDer1 { 0% { top: 15%; left: -20%; transform: scale(0.55); } 50% { top: 30%; left: 45%; transform: scale(0.65); } 100% { top: 60%; left: 120%; transform: scale(0.55); } }
-@keyframes vueloDer2 { 0% { top: 35%; left: -20%; transform: scale(0.85); } 50% { top: 15%; left: 50%; transform: scale(0.95); } 100% { top: 40%; left: 120%; transform: scale(0.85); } }
-@keyframes vueloDer3 { 0% { top: 55%; left: -20%; transform: scale(1.1); } 50% { top: 70%; left: 40%; transform: scale(1.25); } 100% { top: 25%; left: 120%; transform: scale(1.1); } }
-@keyframes vueloDer4 { 0% { top: 75%; left: -20%; transform: scale(0.6); } 50% { top: 55%; left: 60%; transform: scale(0.7); } 100% { top: 85%; left: 120%; transform: scale(0.6); } }
-@keyframes vueloDer5 { 0% { top: 25%; left: -20%; transform: scale(1.0); } 50% { top: 45%; left: 55%; transform: scale(1.15); } 100% { top: 15%; left: 120%; transform: scale(1.0); } }
-@keyframes vueloDer6 { 0% { top: 45%; left: -20%; transform: scale(0.5); } 50% { top: 25%; left: 35%; transform: scale(0.6); } 100% { top: 65%; left: 120%; transform: scale(0.5); } }
-@keyframes vueloDer7 { 0% { top: 65%; left: -20%; transform: scale(0.8); } 50% { top: 80%; left: 50%; transform: scale(0.9); } 100% { top: 35%; left: 120%; transform: scale(0.8); } }
-@keyframes vueloDer8 { 0% { top: 85%; left: -20%; transform: scale(1.15); } 50% { top: 60%; left: 45%; transform: scale(1.3); } 100% { top: 75%; left: 120%; transform: scale(1.15); } }
+/* TRAYECTORIAS Y ESCALAS EXACTAS */
 
-@keyframes vueloIzq1 { 0% { top: 20%; left: 120%; transform: scale(0.85); } 50% { top: 40%; left: 55%; transform: scale(0.95); } 100% { top: 70%; left: -20%; transform: scale(0.85); } }
-@keyframes vueloIzq2 { 0% { top: 40%; left: 120%; transform: scale(0.55); } 50% { top: 20%; left: 40%; transform: scale(0.65); } 100% { top: 15%; left: -20%; transform: scale(0.55); } }
-@keyframes vueloIzq3 { 0% { top: 60%; left: 120%; transform: scale(1.1); } 50% { top: 80%; left: 50%; transform: scale(1.25); } 100% { top: 45%; left: -20%; transform: scale(1.1); } }
-@keyframes vueloIzq4 { 0% { top: 80%; left: 120%; transform: scale(0.75); } 50% { top: 60%; left: 65%; transform: scale(0.85); } 100% { top: 30%; left: -20%; transform: scale(0.75); } }
-@keyframes vueloIzq5 { 0% { top: 10%; left: 120%; transform: scale(0.6); } 50% { top: 30%; left: 45%; transform: scale(0.7); } 100% { top: 50%; left: -20%; transform: scale(0.6); } }
-@keyframes vueloIzq6 { 0% { top: 30%; left: 120%; transform: scale(1.0); } 50% { top: 55%; left: 55%; transform: scale(1.2); } 100% { top: 80%; left: -20%; transform: scale(1.0); } }
-@keyframes vueloIzq7 { 0% { top: 50%; left: 120%; transform: scale(0.8); } 50% { top: 25%; left: 35%; transform: scale(0.9); } 100% { top: 60%; left: -20%; transform: scale(0.8); } }
-@keyframes vueloIzq8 { 0% { top: 70%; left: 120%; transform: scale(0.5); } 50% { top: 85%; left: 50%; transform: scale(0.6); } 100% { top: 25%; left: -20%; transform: scale(0.5); } }
+/* 2 Grandes Izq -> Der (Escala 1.15 a 1.25) */
+@keyframes vueloDer1 { 0% { top: 20%; left: -20%; transform: scale(1.15); } 50% { top: 35%; left: 50%; transform: scale(1.25); } 100% { top: 65%; left: 120%; transform: scale(1.15); } }
+@keyframes vueloDer2 { 0% { top: 60%; left: -20%; transform: scale(1.15); } 50% { top: 75%; left: 45%; transform: scale(1.30); } 100% { top: 30%; left: 120%; transform: scale(1.15); } }
+
+/* 1 Mediana Izq -> Der (Escala 0.85 a 0.95) */
+@keyframes vueloDer3 { 0% { top: 40%; left: -20%; transform: scale(0.85); } 50% { top: 20%; left: 55%; transform: scale(0.95); } 100% { top: 50%; left: 120%; transform: scale(0.85); } }
+
+/* 4 Pequeñas Izq -> Der (Escala 0.50 a 0.65) */
+@keyframes vueloDer4 { 0% { top: 15%; left: -20%; transform: scale(0.55); } 50% { top: 30%; left: 40%; transform: scale(0.65); } 100% { top: 55%; left: 120%; transform: scale(0.55); } }
+@keyframes vueloDer5 { 0% { top: 35%; left: -20%; transform: scale(0.50); } 50% { top: 50%; left: 60%; transform: scale(0.60); } 100% { top: 20%; left: 120%; transform: scale(0.50); } }
+@keyframes vueloDer6 { 0% { top: 75%; left: -20%; transform: scale(0.60); } 50% { top: 60%; left: 35%; transform: scale(0.70); } 100% { top: 80%; left: 120%; transform: scale(0.60); } }
+@keyframes vueloDer7 { 0% { top: 85%; left: -20%; transform: scale(0.50); } 50% { top: 70%; left: 50%; transform: scale(0.60); } 100% { top: 40%; left: 120%; transform: scale(0.50); } }
+
+/* 2 Grandes Der -> Izq (Escala 1.15 a 1.25) */
+@keyframes vueloIzq1 { 0% { top: 25%; left: 120%; transform: scale(1.15); } 50% { top: 45%; left: 55%; transform: scale(1.25); } 100% { top: 70%; left: -20%; transform: scale(1.15); } }
+@keyframes vueloIzq2 { 0% { top: 65%; left: 120%; transform: scale(1.15); } 50% { top: 80%; left: 50%; transform: scale(1.30); } 100% { top: 35%; left: -20%; transform: scale(1.15); } }
+
+/* 1 Mediana Der -> Izq (Escala 0.85 a 0.95) */
+@keyframes vueloIzq3 { 0% { top: 45%; left: 120%; transform: scale(0.85); } 50% { top: 25%; left: 45%; transform: scale(0.95); } 100% { top: 60%; left: -20%; transform: scale(0.85); } }
+
+/* 4 Pequeñas Der -> Izq (Escala 0.50 a 0.65) */
+@keyframes vueloIzq4 { 0% { top: 10%; left: 120%; transform: scale(0.55); } 50% { top: 25%; left: 50%; transform: scale(0.65); } 100% { top: 45%; left: -20%; transform: scale(0.55); } }
+@keyframes vueloIzq5 { 0% { top: 50%; left: 120%; transform: scale(0.50); } 50% { top: 35%; left: 35%; transform: scale(0.60); } 100% { top: 65%; left: -20%; transform: scale(0.50); } }
+@keyframes vueloIzq6 { 0% { top: 80%; left: 120%; transform: scale(0.60); } 50% { top: 65%; left: 60%; transform: scale(0.70); } 100% { top: 25%; left: -20%; transform: scale(0.60); } }
+@keyframes vueloIzq7 { 0% { top: 30%; left: 120%; transform: scale(0.50); } 50% { top: 15%; left: 40%; transform: scale(0.60); } 100% { top: 50%; left: -20%; transform: scale(0.50); } }
